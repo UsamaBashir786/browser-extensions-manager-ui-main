@@ -1,80 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Browser extensions manager UI</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="41"
+            fill="none"
+            viewBox="0 0 40 41"
+          >
+            <g clip-path="url(#a)">
+              <path
+                fill="#C7231A"
+                fill-rule="evenodd"
+                d="M13.715.516c-2.257 0-4.42.896-6.016 2.492L0 10.707v3.524c0 2.49 1.07 4.73 2.774 6.285A8.485 8.485 0 0 0 0 26.802v3.524l7.699 7.698A8.507 8.507 0 0 0 20 37.742a8.508 8.508 0 0 0 12.301.282L40 30.326v-3.524c0-2.49-1.07-4.73-2.774-6.286A8.485 8.485 0 0 0 40 14.231v-3.524l-7.699-7.7A8.508 8.508 0 0 0 20 3.29 8.485 8.485 0 0 0 13.715.516Zm12.044 20a8.528 8.528 0 0 1-.282-.27L20 14.77l-5.477 5.477a8.528 8.528 0 0 1-.282.27c.096.087.19.177.282.269L20 26.262l5.477-5.476c.092-.093.186-.182.282-.27Zm-3.537 9.81v1.682a4.063 4.063 0 0 0 6.936 2.874l6.398-6.397v-1.683a4.063 4.063 0 0 0-6.937-2.874l-6.397 6.398Zm-4.444 0-6.397-6.398a4.063 4.063 0 0 0-6.937 2.873v1.684l6.397 6.397a4.063 4.063 0 0 0 6.937-2.873v-1.683Zm0-21.302v1.683l-6.397 6.397a4.063 4.063 0 0 1-6.937-2.873v-1.683l6.397-6.397a4.063 4.063 0 0 1 6.937 2.873Zm10.841 8.08-6.397-6.397V9.024a4.063 4.063 0 0 1 6.936-2.873l6.398 6.397v1.683a4.063 4.063 0 0 1-6.937 2.873Z"
+                clip-rule="evenodd"
+              />
+            </g>
+            <defs>
+              <clipPath id="a">
+                <path fill="#fff" d="M0 0h40v41H0z" />
+              </clipPath>
+            </defs>
+          </svg>
+          <span class="logo-text">Extensions</span>
+        </div>
+        <button id="theme-toggle" aria-label="Toggle color theme">
+          <img
+            src="./assets/images/icon-moon.svg"
+            alt="Dark mode"
+            class="moon-icon"
+          />
+          <img
+            src="./assets/images/icon-sun.svg"
+            alt="Light mode"
+            class="sun-icon"
+          />
+        </button>
+      </header>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Browser extensions manager UI</title>
+      <main>
+        <div class="content-header">
+          <h1>Extensions List</h1>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+          <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="inactive">Inactive</button>
+          </div>
+        </div>
 
-  Extensions List
+        <div class="extensions-list" id="extensions-container">
+          <!-- Extensions will be loaded here dynamically -->
+        </div>
+      </main>
 
-  All
-  Active
-  Inactive
+      <footer class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </footer>
+    </div>
 
-  <!-- If you plan to use the JSON file to populate the data dynamically, you can delete the content below -->
-
-  DevLens
-  Quickly inspect page layouts and visualize element boundaries.
-  Remove
-
-  StyleSpy
-  Instantly analyze and copy CSS from any webpage element.
-  Remove
-
-  SpeedBoost
-  Optimizes browser resource usage to accelerate page loading.
-  Remove
-
-  JSONWizard
-  Formats, validates, and prettifies JSON responses in-browser.
-  Remove
-
-  TabMaster Pro
-  Organizes browser tabs into groups and sessions.
-  Remove
-
-  ViewportBuddy
-  Simulates various screen resolutions directly within the browser.
-  Remove
-
-  Markup Notes
-  Enables annotation and notes directly onto webpages for collaborative debugging.
-  Remove
-
-  GridGuides
-  Overlay customizable grids and alignment guides on any webpage.
-  Remove
-
-  Palette Picker
-  Instantly extracts color palettes from any webpage.
-  Remove
-
-  LinkChecker
-  Scans and highlights broken links on any page.
-  Remove
-
-  DOM Snapshot
-  Capture and export DOM structures quickly.
-  Remove
-
-  ConsolePlus
-  Enhanced developer console with advanced filtering and logging.
-  Remove
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
