@@ -15,7 +15,7 @@
   --red-700: hsl(3, 77%, 44%);
 
   /* Gradients */
-  --light-gradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+  --light-gradient: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
   --dark-gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
 
   /* Theme variables (default dark based on the image) */
@@ -29,7 +29,7 @@
   --filter-btn-bg: hsl(227, 45%, 20%);
   --filter-btn-active-bg: var(--red-400);
   --header-bg: hsl(227, 45%, 15%);
-  --logo-text-color: hsl(240, 40%, 25%);
+  --logo-text-color: white; /* Changed to white for dark theme */
   --theme-toggle-bg: hsl(227, 35%, 25%);
 }
 
@@ -45,7 +45,7 @@ body.light-theme {
   --filter-btn-bg: var(--neutral-200);
   --filter-btn-active-bg: var(--red-500);
   --header-bg: white;
-  --logo-text-color: var(--neutral-900);
+  --logo-text-color: black; /* Changed to black for light theme */
   --theme-toggle-bg: var(--neutral-100);
 }
 
@@ -56,7 +56,7 @@ body.light-theme {
 }
 
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-size: 16px;
   background: var(--background);
   color: var(--text-primary);
@@ -112,7 +112,8 @@ header {
   justify-content: center;
 }
 
-.moon-icon, .sun-icon {
+.moon-icon,
+.sun-icon {
   display: block;
   width: 22px;
   height: 22px;
@@ -258,7 +259,7 @@ h1 {
   bottom: 0;
   background-color: var(--toggle-bg);
   border-radius: 34px;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .toggle-slider:before {
@@ -270,7 +271,7 @@ h1 {
   bottom: 3px;
   background-color: white;
   border-radius: 50%;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 input:checked + .toggle-slider {
@@ -332,7 +333,7 @@ input:checked + .toggle-slider:before {
     gap: 1.5rem;
     align-items: flex-start;
   }
-  
+
   .filter-tabs {
     justify-content: flex-start;
     width: 100%;
@@ -343,28 +344,28 @@ input:checked + .toggle-slider:before {
   .container {
     padding: 1.5rem 1rem;
   }
-  
+
   .extensions-list {
     grid-template-columns: 1fr;
   }
-  
+
   .extension-header {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  
+
   .extension-logo {
     margin-right: 0;
     margin-bottom: 1rem;
   }
-  
+
   .extension-actions {
     flex-direction: column;
     gap: 1rem;
     align-items: center;
   }
-  
+
   .extension-description {
     text-align: center;
   }
